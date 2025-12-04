@@ -1,0 +1,25 @@
+# IDE and editor specific files
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Large data files and directories
+data/
+data_frames/
+FaceForensics++_C23/
+
+# Model weights
+*.pth
+
+# Other files
+# soal.txt
+# paper.txt
+# dataset_explanation.md
+# dataset_readme.md
+# pipeline.md

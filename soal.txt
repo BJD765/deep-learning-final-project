@@ -1,0 +1,111 @@
+ BINUS University
+
+Academic Career:     
+Undergraduate / Master / Doctoral *) 	Class Program:
+Regular/ Global Class*)
+☐  Mid Project
+☒  Final Project          
+Term : Odd / Even / Compact *)
+Period (Only for Master): 1 / 2 *)
+☒  Kemanggisan
+☒  Alam Sutera
+☐  Bekasi
+☐  Senayan
+☐  Bandung
+☐  Malang
+☐  Semarang
+☐  Medan
+	Academic Year   	:	2025/2026   
+			Faculty / Dept.	:	School of Computer Science / Computer Science Department
+			Code - Course	:	COMP6826001 / Deep Learning    
+			Class	:	All class
+) Strikethrough the unnecessary items
+Please submit the project on time according to exam schedule
+The penalty for CHEATING is DROP OUT!
+
+1.	Purpose
+The final project provides students with an opportunity to integrate theoretical knowledge and practical skills in Deep Learning. Students will experience the end-to-end process of designing, implementing, and evaluating a deep learning solution that addresses a real-world challenge.
+
+2.	Learning Outcomes (LOs)
+LO 1: Execute structured deep learning experimentation workflows, including data preparation, model training, and evaluation.
+LO 2: Construct deep learning models using modern programming tools and frameworks.
+LO 3: Analyze the behavior and performance of theoretical and practical deep learning models under various training scenarios.
+LO 4: Evaluate the suitability and limitations of different deep learning approaches for solving real-world problems across domains
+.
+3.	Mapping of Deliverables to LOs
+
+Deliverable	Aligned LOs
+Application	LO 1, LO 2
+Written Report	LO 3, LO 4
+Demo Video	LO 3, LO 4
+
+4.	Suggested Themes
+• Image Classification / Object Detection
+• Generative Models (e.g., diffusion, text-to-image)
+• Time Series Prediction / Anomaly Detection
+• Reinforcement Learning (e.g., game agent, robotics)
+• Multi-Modal Learning (e.g., video understanding, text+image retrieval)
+
+5.	Technical Notes
+• Language: Python
+• Frameworks: TensorFlow, PyTorch, Keras
+• Platforms: Flask, Django, Streamlit, FastAPI (with instructor approval)
+
+6.	Project Proposal (Checkpoint)
+Submit by Week 6 (1–2 pages):
+• Project title and problem statement
+• Dataset source and description (including licensing/permissions)
+• Initial plan for model/methodology and baseline
+• Planned evaluation metrics and success criteria
+• References (> 2–3 relevant works)
+
+7.	Deliverables & Weights
+• Application (40%) — Functional prototype with a user interface; includes input, model execution, clear outputs
+• Written Report (40%) — 10–15 pages, academic style; follows required structure; includes analysis and reflection
+• Demo Video (20%) — < 5 minutes; explains problem, workflow, and results with professional narration
+
+8.	Required Report Structure
+• Title Page (Project Title, Team Members, Course Code, Semester)
+• Abstract
+• Introduction (background, problem statement, objectives, significance)
+• Related Work (summary of relevant literature or existing solutions)
+• Methodology (dataset, preprocessing, model architecture, training setup, evaluation metrics)
+• Implementation & Results (system details, experiments, visualizations, results obtained)
+• Discussion & Limitations (analysis of performance, challenges, trade-offs)
+• Conclusion & Future Work
+• References (IEEE/APA format)
+• Appendix (team contribution statement, screenshots, code snippets)
+
+9.	Dataset Policy
+• Use legal and ethically sourced datasets (public/open-source or collected with proper consent)
+• If collecting data: document the collection process and preprocessing steps
+• Ensure dataset size and quality are sufficient for meaningful experimentation
+• Disclose any data limitations (e.g., imbalance, missing values) and mitigation strategies
+
+10.	Ethics & Responsible AI
+• Avoid unfair bias and discrimination in dataset/model design
+• Ensure transparency/explainability of results where feasible
+• Protect privacy and handle sensitive data responsibly
+• Avoid harmful or unethical applications of AI
+
+11.	Team Contribution Statement
+• List specific contributions per member (data, preprocessing, modeling, UI/app, report)
+• Highlight shared tasks and coordination methods (e.g., Git, issue tracker)
+• Include weekly/biweekly contribution logs if requested by instructor
+
+ 
+12.	Evaluation Rubric
+Criterion	Weight	Excellent (86–100)	Good (71–85)	Fair (51–70)	Poor (0–50)
+Application Quality	40%	Stable, user-friendly, complete functionality	Mostly stable, minor issues	Runs but incomplete	Barely functional
+Written Report	40%	Academic format, in-depth analysis	Clear structure, sufficient analysis	Basic analysis	Incomplete/poorly written
+Demo Video	20%	Clear, professional, engaging presentation	Clear with minor gaps	Hard to follow, partially explained	Unclear, missing, or over time
+Points Breakdown
+• Application (40 pts): functionality (20), usability (10), reliability (10)
+• Written Report (40 pts): methodology (15), analysis (15), writing quality (10)
+• Demo Video (20 pts): clarity (10), presentation (10)
+
+13.	Submission Guidelines
+• Deadline: Week 14, Sunday, 23:59 WIB
+• Submission via LMS (Binusmaya): GitHub repo (code), PDF report (10–15 pages), MP4/YouTube link (video)
+• Late Policy: –10% per day late
+• Plagiarism Policy: plagiarism or uncredited code reuse results in a failing grade
