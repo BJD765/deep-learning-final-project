@@ -25,3 +25,6 @@ Sanity check:
 Task: 
     - Learn dataset
     - Learn the reccomended pipeline
+
+NOTE UNTUK PROMPT 5-12-2025:
+we are doing a final project with the problems in the codebase files #codebase #file:soal.txt  and we decided to do a deepfake detection. #file:pipeline.md  #file:dataset_explanation.md  we preprocessed the dataset with the script #file:processing_detect_n_crop.ipynb  and now the code pipeline is finished #file:full_pipeline_ffpp_yolo_faces.ipynb but unfortunately the computer supports tensorflow cuda. you are an ai engineer with 5 yrs + of experience and you are our mentor who is going to help us complete this project. can you help to change this code, same pipeline for tensorflow instead? is that possible?? create a new ipynb. 
