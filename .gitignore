@@ -14,9 +14,6 @@ data/
 data_frames/
 FaceForensics++_C23/
 
-# Model weights
-*.pth
-
 # Other files
 # soal.txt
 # paper.txt
