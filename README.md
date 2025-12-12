@@ -1,4 +1,5 @@
 # Deepfake Detection using Deep Learning
+# Catatan: pak tolong login pakai akun binus untuk mengakses onedrive. terima kasih 🙏
 
 > **COMP6826001 - Deep Learning Final Project**  
 > BINUS University | Semester Odd 2025/2026
