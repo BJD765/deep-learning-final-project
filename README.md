@@ -1,30 +1,116 @@
-python: 3.11.x
-env name: dl_env
-Commands:
-    conda create -n dl_env python=3.11
-    conda activate dl_env
-    pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu130
-    pip3 install torchaudio --index-url https://download.pytorch.org/whl/cu130   # if you installed it
-    pip install ipykernel
-    python -m ipykernel install --user --name dl_env --display-name "Python (dl_env)"
+# Deepfake Detection using Deep Learning
+
+> **COMP6826001 - Deep Learning Final Project**  
+> BINUS University | Semester Odd 2025/2026
+
+## Overview
+
+This project implements a **deepfake detection system** using deep learning to classify face images as **REAL** or **FAKE**. We use a ResNet18 model trained on the **FaceForensics++** dataset with YOLO-based face detection preprocessing.
+
+### Live Demo
+**Try it here:** [Hugging Face Spaces](https://huggingface.co/spaces/masp307/DefakeNet)
+
+---
+
+## Repository Structure
+
+```
+deep-learning-final-project/
+├── notebooks/
+│   ├── baseline.ipynb                # Main training pipeline (BEST MODEL)
+│   ├── yolo_preprocessing.ipynb      # Face detection & cropping
+│   └── archive/                      # Ablation experiments
+│       ├── ablation11.ipynb
+│       ├── ablation22.ipynb
+│       └── ablation3.ipynb
+├── models/
+│   ├── BEST_MODEL.pth                # Best trained model weights
+│
+├── data/
+│   └── README.md                     # Dataset information
+├── internal_files/                   # Reference docs (gitignored)
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Methodology
+
+### Dataset: FaceForensics++ (C23)
+
+| Category | Methods | Videos |
+|----------|---------|--------|
+| **REAL** | Original | 1,000 |
+| **FAKE** | Deepfakes, FaceSwap, Face2Face, NeuralTextures, FaceShifter, DeepFakeDetection | 6,000 |
+
+### Pipeline
+
+1. **Preprocessing**: YOLOv8-Face detection -> crop faces -> resize to 299x299
+2. **Data Split**: 70% train / 15% val / 15% test (video-level stratification)
+3. **Model**: ResNet18 (pretrained on ImageNet)
+4. **Loss**: Focal Loss (gamma=2.0) for class imbalance
+5. **Augmentation**: Random crop, flip, color jitter, Gaussian blur
+
+### Training Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Optimizer | Adam |
+| Learning Rate | 1e-4 |
+| Batch Size | 64 |
+| Epochs | 20 |
+| Image Size | 224x224 |
+
+---
+
+## Results
+
+| Metric | Score |
+|--------|-------|
+| **Accuracy** | 93.31% |
+| **F1-Score** | 93.42% |
 
 
-Sanity check: 
-    import torch
+---
 
-    print("Torch:", torch.__version__, "| CUDA runtime:", torch.version.cuda)
-    print("CUDA available:", torch.cuda.is_available())
-    print("Device count:", torch.cuda.device_count())
-    if torch.cuda.is_available():
-        print("Current device:", torch.cuda.current_device())
-        print("Device name:", torch.cuda.get_device_name(0))
+## Quick Start
+
+### Environment Setup
+
+```bash
+# Create conda environment
+conda create -n dl_env python=3.11
+conda activate dl_env
+
+# Install PyTorch with CUDA
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+
+# Install dependencies
+pip install numpy pandas scikit-learn matplotlib seaborn tqdm ultralytics albumentations
+```
+
+### Run Notebooks
+
+1. **Preprocessing**: `notebooks/yolo_preprocessing.ipynb` - Extract face crops from videos
+2. **Training**: `notebooks/baseline.ipynb` - Train the deepfake detector
+
+---
+
+## Team Members
+
+| Name | Student ID | Contribution |
+|------|------------|--------------|
+| Jesslyn Trixie E | 2702260514 | AI Engineer and researcher |
+| Brian Juniarta D | 2702279363 | AI engineer and researcher  |
+| Mochammad Aqsa SP | 2702302744 | Full-stack developer and AI researcher|
 
 
+---
 
+## License
 
-Task: 
-    - Learn dataset
-    - Learn the reccomended pipeline
+MIT License - see [LICENSE](LICENSE) for details.
 
-NOTE UNTUK PROMPT 5-12-2025:
-we are doing a final project with the problems in the codebase files #codebase #file:soal.txt  and we decided to do a deepfake detection. #file:pipeline.md  #file:dataset_explanation.md  we preprocessed the dataset with the script #file:processing_detect_n_crop.ipynb  and now the code pipeline is finished #file:full_pipeline_ffpp_yolo_faces.ipynb but unfortunately the computer supports tensorflow cuda. you are an ai engineer with 5 yrs + of experience and you are our mentor who is going to help us complete this project. can you help to change this code, same pipeline for tensorflow instead? is that possible?? create a new ipynb. 
+---

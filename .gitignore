@@ -1,22 +1,116 @@
-# IDE and editor specific files
-.vscode/
-.idea/
+# ==================================
+# Git Ignore for Deep Learning Project
+# ==================================
 
-# Python cache
+# ===== Python =====
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
+# ===== Jupyter Notebooks =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
 
-# Large data files and directories
-data/
-data_frames/
+# ===== Virtual Environments =====
+venv/
+env/
+ENV/
+.venv/
+.conda/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ===== OS Generated =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== Data Files =====
 FaceForensics++_C23/
+FFprocessed/
+FFprocessed.zip
+data_yolo_faces/
+data/raw/
+data/processed/
+*.mp4
+*.avi
+*.mov
 
-# Other files
-# soal.txt
-# paper.txt
-# dataset_explanation.md
-# dataset_readme.md
-# pipeline.md
+# ===== Internal Reference Files =====
+internal_files/
+
+# ===== Model Files =====
+# Note: models/ folder is tracked, but large files in root are ignored
+*.pt
+*.h5
+*.onnx
+*.pkl
+*.joblib
+
+# Keep models folder but ignore if files are too large
+# !models/*.pth
+
+# ===== Outputs =====
+outputs/logs/*.log
+outputs/plots/*.png
+outputs/plots/*.pdf
+
+# ===== Logs =====
+logs/
+*.log
+tensorboard_logs/
+wandb/
+mlruns/
+
+# ===== Temp Files =====
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+
+# ===== Archives =====
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ===== Environment Variables =====
+.env
+.env.local
+*.env
+
+# ===== YOLO =====
+yolov8n-face.pt
+runs/
